@@ -7,6 +7,7 @@
 #   config.output_style = :compact
 # end
 
+
 ###
 # Page options, layouts, aliases and proxies
 ###
