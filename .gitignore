@@ -18,3 +18,5 @@
 
 #Ignore generates css/less file
 source/assets/css/application.css.less
+
+._*
