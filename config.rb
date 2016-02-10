@@ -1,33 +1,31 @@
-###
-# Compass
-###
+require_relative "./lib/build_cleaner"
 
-# Change Compass configuration
-# compass_config do |config|
-#   config.output_style = :compact
-# end
+set :site_url, "http://www.newbrook-engineering.co.uk"
+set :site_description, "Metal Fabricators - Crewe Cheshire"
+
+#Custom pages / routes
+page "CNAME", layout: false
+page "/sitemap.xml", layout: false
+page "robots.txt", layout: false
+page "humans.txt", layout: false
+
+set :url_root, site_url
+
+activate :search_engine_sitemap
 
 
-###
-# Page options, layouts, aliases and proxies
-###
+activate :google_analytics do |ga|
+  ga.tracking_id = 'UA-44053537-1' # Replace with your property ID.
+  # Tracking in development environment (default = true)
+  ga.development = false
+end
 
-# Per-page layout changes:
-#
-# With no layout
-# page "/path/to/file.html", :layout => false
-#
-# With alternative layout
-# page "/path/to/file.html", :layout => :otherlayout
-#
-# A path which all have the same layout
-# with_layout :admin do
-#   page "/admin/*"
-# end
+# Automatic image dimensions on image_tag helper
+activate :automatic_image_sizes
 
-# Proxy pages (http://middlemanapp.com/basics/dynamic-pages/)
-# proxy "/this-page-has-no-template.html", "/template-file.html", :locals => {
-#  :which_fake_page => "Rendering a fake page with a local variable" }
+activate :directory_indexes
+
+set :relative_links, true
 
 ###
 # Helpers
@@ -37,24 +35,21 @@
 # activate :automatic_image_sizes
 
 # Reload the browser automatically whenever files change
-activate :livereload
+configure :development do
+  activate :livereload
+end
 
-# Methods defined in the helpers block are available in templates
-# helpers do
-#   def some_helper
-#     "Helping"
-#   end
-# end
 
 set :css_dir, 'assets/css'
-
 set :js_dir, 'assets/js'
-
 set :images_dir, 'assets/img'
+
 
 # Build-specific configuration
 configure :build do
 
+  #See lib/build_cleaner.rb
+  activate :build_cleaner
   #Ignore less files
   ignore "*.less"
   #
@@ -64,32 +59,34 @@ configure :build do
   activate :minify_javascript
 
   # Enable cache buster
-  # activate :asset_hash, :ignore => [/^css/less/]
+  activate :asset_hash#, :ignore => [/^css/less/]
 
   # Use relative URLs
   activate :relative_assets
 
+  # Minify HTML on build
+  activate :minify_html
+
   # Or use a different image path
   # set :http_prefix, "/Content/images/"
+  activate :search_engine_sitemap
 end
 
 
-after_build do
-  require 'fileutils'
-  # delete_except "build/assets/js/", "all.js"
-  # delete_except "build/assets/css/", "all.css"
+activate :deploy do |deploy|
 
-  require 'digest/sha1'
-  sha1 = Digest::SHA1.hexdigest Time.now.getutc.to_i.to_s
-  allJS = "all-" + sha1 + ".js"
-  allCSS = "all-" + sha1 + ".css"
-  File.rename("build/assets/js/all.js", "build/assets/js/" + allJS)
-  File.rename("build/assets/css/all.css", "build/assets/css/" + allCSS)
-
-  index_file = "build/index.html"
-  html = File.read(index_file)
-  html = html.gsub(/all\.js/, allJS)
-  html = html.gsub(/all\.css/, allCSS)
-
-  File.open(index_file, "w") { |file| file.puts html }
+  deploy.build_before = true
+  deploy.method = :git
+  # Optional Settings
+  deploy.remote   = 'github' # remote name or git url, default: origin
+  deploy.branch   = 'gh-pages' # default: gh-pages
+  #
+  # deploy.method = :rsync
+  # deploy.host   = 'helium.deploy'
+  # deploy.path   = '/home/deploy/apps/newbrooks/www/public_html'
+  # # Optional Settings
+  # # deploy.user  = 'tvaughan' # no default
+  # # deploy.port  = 5309 # ssh port, default: 22
+  # deploy.clean = true # remove orphaned files on remote host, default: false
+  # # deploy.flags = '-rltgoDvzO --no-p --del' # add custom flags, default: -avz
 end

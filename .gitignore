@@ -20,3 +20,6 @@
 source/assets/css/application.css.less
 
 ._*
+
+# Ignore gems installed in local directory
+/vendor/bundle/
