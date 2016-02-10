@@ -24,6 +24,8 @@ gem "tzinfo-data", platforms: [:mswin, :mingw]
 gem 'middleman-deploy', '~> 1.0'
 gem 'middleman-search_engine_sitemap'
 
+# Middleman Google Analytics
+gem "middleman-google-analytics"
 
 gem 'jquery-middleman'
 
