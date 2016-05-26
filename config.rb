@@ -8,6 +8,7 @@ page "CNAME", layout: false
 page "/sitemap.xml", layout: false
 page "robots.txt", layout: false
 page "humans.txt", layout: false
+page "/googlec9c74fc0e30171ac.html", directory_index: false, layout: false
 
 set :url_root, site_url
 
