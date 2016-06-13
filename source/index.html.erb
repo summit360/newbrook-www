@@ -27,11 +27,11 @@ title: Newbrook Engineering - Metal Fabricators
 <div class="container">
   <div class="row">
     <div class="col-sm-3 col-xs-12">
-      <img src="assets/img/chas.jpg" class="img-responsive  hidden-xs"/>
+      <img src="assets/img/chas.jpg" class="img-responsive client-logo  hidden-xs"/>
       <p class="text-center lead visible-xs p-t-20">We are a CHAS accredited contractor.</p>
     </div>
     <div class="col-sm-3 col-xs-12 col-sm-push-6">
-      <img src="assets/img/construction_line.jpg" class="img-responsive  hidden-xs"/>
+      <img src="assets/img/construction_line.jpg" class="img-responsive client-logo  hidden-xs"/>
       <p class="text-center lead visible-xs p-t-20">We are a ConstructionLine registered company.</p>
     </div>
     <div class="col-sm-6 col-xs-12 col-sm-pull-3">
@@ -120,7 +120,7 @@ title: Newbrook Engineering - Metal Fabricators
   <div class="container">
     <div class="alternate-graphicbox row">
       <div class="graphicbox col-sm-4 col-sm-push-8">
-        <img src="assets/img/whats/what-9.jpg" alt="" class="img-responsive text-center">
+        <img src="assets/img/whats/what-9.jpg" alt="" class="img-responsive client-logo text-center">
       </div>
       <div class="description col-sm-7 col-sm-pull-4">
         <h3 class="">Saftey Provision</h3>
@@ -204,10 +204,46 @@ title: Newbrook Engineering - Metal Fabricators
 
     <a href="tel:+441270584836" class="btn btn-lg btn-primary"><i class="fa fa-phone"></i> Phone: 01270 584 836</a>
 
-    <button class="btn btn-lg btn-primary"><i class="fa fa-envelope-o"></i>
-        <script type="text/javascript">eval(unescape("%74%77%79%6e%6c%33%39%3d%5b%27%25%36%65%25%36%35%25%37%37%25%36%32%25%37%32%25%36%66%25%36%66%25%36%62%25%32%65%25%36%35%25%36%65%25%36%37%27%2c%5b%27%25%36%33%25%36%66%25%36%64%27%2c%27%25%36%37%25%36%64%25%36%31%25%36%39%25%36%63%27%5d%2e%72%65%76%65%72%73%65%28%29%2e%6a%6f%69%6e%28%27%2e%27%29%5d%2e%6a%6f%69%6e%28%27%40%27%29%3b%61%68%69%79%61%35%39%3d%75%6e%65%73%63%61%70%65%28%74%77%79%6e%6c%33%39%29%3b%64%6f%63%75%6d%65%6e%74%2e%77%72%69%74%65%28%61%68%69%79%61%35%39%2e%6c%69%6e%6b%28%27%6d%61%69%27%2b%27%6c%74%6f%3a%27%2b%74%77%79%6e%6c%33%39%29%29%3b"));</script>
-    </button>
+      <a href="mailto:newbrook.eng@gmail.com" class="btn btn-lg btn-primary"><i class="fa fa-envelope-o"></i> newbrook.eng@gmail.com</a>
+
+    </a>
   </div>
+</section>
+
+
+<section id="clients" class="section section-our-clients">
+  <div class="container">
+    <h2 class="section-title"><span>Our Clients</span></h2>
+    <div class="row">
+      <div class="col-sm-3 col-xs-6">
+        <h5>Transportation Companies</h5>
+      </div>
+      <div class="col-sm-3 col-xs-6">
+        <h5>Building Contractors</h5>
+      </div>
+      <div class="col-sm-3 col-xs-6">
+        <h5>Private Builders</h5>
+      </div>
+
+      <div class="col-sm-3 col-xs-6">
+        <h5>Agricultural Companies</h5>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="grid row">
+
+    <% data.clients.published.each do |c| %>
+    <div class="grid-item col-xs-6 col-sm-4 col-lg-4">
+
+      <img src="assets/img/clients/<%= c.image%>"
+      alt="<%= c.name %>"
+      class="img-thumbnail img-responsive center-block" />
+
+    </div>
+    <% end %>
+</div>
+</div>
 </section>
 
 <section id="history" class="section section-blog section-hilite">
@@ -283,52 +319,9 @@ title: Newbrook Engineering - Metal Fabricators
         </article>
         <div class="col-xs-12">
 
-            <img src="assets/img/ne-team.jpg" class="img-responsive">
+            <img src="assets/img/ne-team.jpg" class="img-responsive client-logo">
         </div>
       </div>
-    </div>
-  </div>
-</section>
-
-<section id="clients" class="section section-our-clients">
-  <div class="container">
-    <h2 class="section-title"><span>Our Clients</span></h2>
-    <div class="row">
-      <div class="col-sm-3 col-xs-6">
-        <a href="#">Transportation Companies</a>
-      </div>
-      <div class="col-sm-3 col-xs-6">
-        <a href="#">Building Contractors</a>
-      </div>
-      <div class="col-sm-3 col-xs-6">
-        <a href="#">Private Builders</a>
-      </div>
-
-      <div class="col-sm-3 col-xs-6">
-        <a href="#">Agricultural Companies</a>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-sm-4 col-xs-6">
-        <a href="#">JTI</a>
-      </div>
-      <div class="col-sm-4 col-xs-6">
-        <a href="#">GIST</a>
-      </div>
-
-      <div class="col-sm-4 col-xs-6">
-        <a href="#">BUILDBASE</a>
-      </div>
-    </div>
-    <div class="row">
-
-      <div class="col-xs-6">
-        <a href="http://www.pochinconstruction.co.uk/" target="_new"> <img src="assets/img/clients/pochin.png" alt="" class="text-center" /></a>
-      </div>
-      <div class="col-xs-6">
-       <a href="http://www.robinsonsbrewery.com/" target="_new"> <img src="assets/img/clients/robinsons-brewery.png" alt="" class="text-center" /></a>
-      </div>
-
     </div>
   </div>
 </section>
