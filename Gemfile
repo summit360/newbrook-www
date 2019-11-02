@@ -1,19 +1,14 @@
-# If you have OpenSSL installed, we recommend updating
-# the following line to use "https"
-source 'http://rubygems.org'
+source 'https://rubygems.org'
+git_source(:github) { |repo| "https://github.com/#{repo}.git" }
+ruby '2.4.1'
 
-gem "middleman", "~>3.4.1"
-
-# Live-reloading plugin
+gem "middleman", "~> 3.4"
 gem "middleman-livereload", "~> 3.3.0"
-
 gem "therubyracer" #Less dependency gem "less"
 gem "less"
-
 gem "guard"
 gem 'rb-fsevent'
 gem "foreman"
-
 
 # For faster file watcher updates on Windows:
 gem "wdm", "~> 0.1.0", :platforms => [:mswin, :mingw]
