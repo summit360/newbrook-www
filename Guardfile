@@ -1,8 +1,10 @@
+# frozen_string_literal: true
+
 require 'guard/guard'
 
-module ::Guard
+module Guard
+  # Guard for less files
   class LessWatcher < ::Guard::Guard
-
     def start
       run_on_changes([])
     end
@@ -13,23 +15,23 @@ module ::Guard
     end
 
     def run_on_changes(paths)
-      dest_path = "source/assets/css/application.css.less"
+      dest_path = 'source/assets/css/application.css.less'
       return if paths == [dest_path]
 
-      next_number = if File.exists?(dest_path)
-                     contents = File.read(dest_path)
-                     if contents =~ %r{// (\d+)}
-                       $1.to_i + 1
-                     end
-                   end
+      next_number = next_number(dest_path).to_i
 
-      next_number = next_number.to_i
-
-      template = File.read("source/assets/css/application-template.css.less")
+      template = File.read('source/assets/css/application-template.css.less')
 
       File.open(dest_path, 'w') do |file|
-        file.write(template.gsub(%r{// (\d+)}) { "// #{next_number}"})
+        file.write(template.gsub(%r{// (\d+)}) { "// #{next_number}" })
       end
+    end
+
+    def next_number(dest_path)
+      return unless File.exist?(dest_path)
+
+      contents = File.read(dest_path)
+      Regexp.last_match(1).to_i + 1 if contents =~ %r{// (\d+)}
     end
   end
 end
