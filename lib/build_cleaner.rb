@@ -1,10 +1,11 @@
-class BuildCleaner < Middleman::Extension
+# frozen_string_literal: true
 
-  def initialize(app, options_hash={}, &block)
+# Cleans the build directory
+class BuildCleaner < Middleman::Extension
+  def initialize(app, options_hash = {}, &block)
     super
     FileUtils.rm_rf app.config[:build_dir]
   end
-
 end
 
 ::Middleman::Extensions.register(:build_cleaner, BuildCleaner)
