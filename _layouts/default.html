@@ -5,8 +5,85 @@
     <meta charset="utf-8">
     <title>{{ page.title }} - {{ site.title }}</title>
     <link rel="stylesheet" href="{{ "/assets/css/main.css" | relative_url }}">
+    <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
   </head>
   <body>
-    {{ content }}
+    <div class="bg-white">
+      <header>
+        <div class="relative bg-white">
+          <div class="flex justify-between items-center max-w-7xl mx-auto px-4 py-6 sm:px-6 md:justify-start md:space-x-10 lg:px-8">
+            <div class="flex justify-start lg:w-0 lg:flex-1">
+              <a href="/">
+                <span class="sr-only">Newbrook Engineering</span>
+                <img class="h-8 w-auto sm:h-10" src="/assets/img/ne-logo.jpg" alt="Newbrook Engineering Logo">
+              </a>
+            </div>
+
+            <nav class="hidden md:flex space-x-10">
+              <a href="#" class="text-base font-medium text-gray-500 hover:text-gray-900">
+                Call Link
+              </a>
+              <a href="#" class="text-base font-medium text-gray-500 hover:text-gray-900">
+                Email Link
+              </a>
+            </nav>
+          </div>
+
+          <!--
+            Mobile menu, show/hide based on mobile menu state.
+
+            Entering: "duration-200 ease-out"
+              From: "opacity-0 scale-95"
+              To: "opacity-100 scale-100"
+            Leaving: "duration-100 ease-in"
+              From: "opacity-100 scale-100"
+              To: "opacity-0 scale-95"
+          -->
+          <div class="absolute z-30 top-0 inset-x-0 p-2 transition transform origin-top-right md:hidden">
+            <div class=" bg-white divide-y-2 divide-gray-50">
+              <div class="pt-5 pb-6 px-5">
+                <div class="flex items-center justify-between">
+                  <div>
+                    <img class="h-8 w-auto" src="/assets/img/ne-logo.jpg" alt="Newbrook Engineering Logo">
+                  </div>
+                  <!-- replace with CTA phone -->
+                  <div class="text-base font-medium">Newbrook Engineering</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+      <main>
+        {{ content }}
+      </main>
+    </div>
+    <!-- Footer section -->
+    <footer class="mt-24 bg-gray-900 sm:mt-12">
+      <div class="mx-auto max-w-md py-12 px-4 overflow-hidden sm:max-w-3xl sm:px-6 lg:max-w-7xl lg:px-8">
+        <nav class="-mx-5 -my-2 flex flex-wrap justify-center" aria-label="Footer">
+          <div class="px-5 py-2">
+            <a href="/" class="text-base text-gray-400 hover:text-gray-300">
+              Home
+            </a>
+          </div>
+          <div class="px-5 py-2">
+            <a href="/contact-us" class="text-base text-gray-400 hover:text-gray-300">
+              Contact Us
+            </a>
+          </div>
+
+          <div class="px-5 py-2">
+            <a href="/privacy-policy.pdf" class="text-base text-gray-400 hover:text-gray-300">
+              Privacy Policy
+            </a>
+          </div>
+        </nav>
+
+        <p class="mt-8 text-center text-base text-gray-400">
+          &copy; 2021 Newbrook Engineering. All rights reserved.
+        </p>
+      </div>
+    </footer>
   </body>
 </html>
