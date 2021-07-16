@@ -2,7 +2,6 @@
 layout: default
 ---
 
-<!-- Hero section -->
 <div class="max-w-7xl mx-auto py-1 px-4 sm:px-6 lg:pb-2 lg:px-8">
   <div class="max-w-3xl mx-auto text-center">
     <h1 class="text-3xl font-extrabold text-red-600">
@@ -11,8 +10,9 @@ layout: default
   </div>
 </div>
 
+<!-- Hero section -->
 <div class="relative">
-  <div class="absolute inset-x-0 bottom-0"></div>
+  <div class="absolute inset-x-0 bottom-0 h-1/2 bg-gray-100"></div>
   <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
     <div class="relative shadow-xl sm:rounded-2xl sm:overflow-hidden">
       <div class="absolute inset-0">
@@ -118,8 +118,8 @@ layout: default
     </div>
   </div>
 </div>
-<!-- logo cloud -->
-<div class="bg-white">
+<!-- certification cloud -->
+<div class="bg-gray-100">
   <div class="max-w-7xl mx-auto py-16 px-4 sm:px-6 lg:px-8">
     <p
       class="
@@ -132,26 +132,82 @@ layout: default
     >
       Trusted by many, certified by trusted bodies
     </p>
-    <div class="mt-6 grid grid-cols-2 gap-8 md:grid-cols-4 lg:grid-cols-3">
-      <div class="col-span-1 flex justify-center md:col-span-2 lg:col-span-1">
-        <img
-          class="h-36"
-          src="/assets/img/certified/chas.jpg"
-          alt="CHAS Certified"
-        />
+    <div class="mt-6 grid grid-cols-1 gap-8 md:grid-cols-3 lg:grid-cols-3">
+      <div class="col-span-1 flex justify-center">
+        <a href="/assets/img/certified/CHAS-Certificate.pdf" target="_new">
+          <img
+            class="h-36"
+            src="/assets/img/certified/chas.jpg"
+            alt="CHAS Certified"
+          />
+        </a>
       </div>
-      <div class="col-span-1 flex justify-center md:col-span-2 lg:col-span-1">
-        <img
-          class="h-36"
-          src="/assets/img/certified/newbrook-cfa-ukas-0b949fa0.jpg"
-          alt="Cfa EN 1090-1"
-        />
+      <div class="col-span-1 flex justify-center">
+        <a
+          href="/assets/img/certified/EN1090-FPCCertificateUK-Newbrook exp.9.4.24.pdf"
+          target="_new"
+        >
+          <img
+            class="h-36"
+            src="/assets/img/certified/EN1090-Logo.png"
+            alt="Cfa EN 1090-1"
+          />
+        </a>
       </div>
-      <div class="col-span-1 flex justify-center md:col-span-2 lg:col-span-1">
+      <div class="col-span-1 flex justify-center">
         <img
           class="h-36"
           src="/assets/img/certified/energas.jpeg"
           alt="Energas Supplier"
+        />
+      </div>
+    </div>
+
+    <!-- certification cloud -->
+    <div class="mt-6 grid grid-cols-4 gap-8 md:grid-cols-8 lg:grid-cols-8">
+      <div class="col-span-1 flex justify-center md:col-span-2 lg:col-span-2">
+        <img
+          class="h-12"
+          src="/assets/img/clients/rowlinsonspackaging.png"
+          alt="Rowlinsons Packaging"
+        />
+      </div>
+
+      <div class="col-span-1 flex justify-center md:col-span-2 lg:col-span-2">
+        <img
+          class="h-12"
+          src="/assets/img/clients/buildbase.png"
+          alt="Buildbase"
+        />
+      </div>
+      <div class="col-span-1 flex justify-center md:col-span-2 lg:col-span-2">
+        <img
+          class="h-12"
+          src="/assets/img/clients/eastfield.png"
+          alt="Eastfield"
+        />
+      </div>
+      <div class="col-span-1 flex justify-center md:col-span-2 lg:col-span-2">
+        <img class="h-12" src="/assets/img/clients/gist.png" alt="Gist" />
+      </div>
+      <div class="col-span-1 flex justify-center md:col-span-2 lg:col-span-2">
+        <img class="h-12" src="/assets/img/clients/boughey.png" alt="Boughey" />
+      </div>
+
+      <div class="col-span-1 flex justify-center md:col-span-2 lg:col-span-1">
+        <img class="h-12" src="/assets/img/clients/jti.png" alt="JTI" />
+      </div>
+      <div class="col-span-1 flex justify-center md:col-span-2 lg:col-span-1">
+        <img class="h-12" src="/assets/img/clients/ntc.png" alt="NTC" />
+      </div>
+      <div class="col-span-1 flex justify-center md:col-span-2 lg:col-span-1">
+        <img class="h-12" src="/assets/img/clients/nwf.png" alt="NWF" />
+      </div>
+      <div class="col-span-1 flex justify-center md:col-span-2 lg:col-span-1">
+        <img
+          class="h-12"
+          src="/assets/img/clients/robinsons-brewery.png"
+          alt="Robinsons Brewery"
         />
       </div>
     </div>
@@ -312,10 +368,16 @@ layout: default
               <h3 class="mt-8 text-lg font-medium text-gray-900 tracking-tight">
                 Structural
               </h3>
-              <p class="mt-5 text-base text-gray-500">
-                From staircases and ramps to extensions, we offer a range of
-                structural fabrication services.
-              </p>
+              <div class="mt5">
+                <p class="text-base text-gray-500">
+                  BS EN 1090 Execution Class 2 - Regulation of fabrication and
+                  assembly of Steel Structures.
+                </p>
+                <p class="text-base text-gray-500">
+                  Newbrook Engineering Ltd is certified to BS EN 1090 Execution
+                  Class 2 standards for structural steelwork.
+                </p>
+              </div>
             </div>
           </div>
         </div>
@@ -352,15 +414,24 @@ layout: default
                 </span>
               </div>
               <h3 class="mt-8 text-lg font-medium text-gray-900 tracking-tight">
-                Safety Provision
+                BS EN 1090
               </h3>
-              <p class="mt-5 text-base text-gray-500">
-                Fire escapes, gangways and handrails. Ideal to make new or old
-                areas safe.
-              </p>
+              <div class="mt5">
+                <p class="text-base text-gray-500">
+                  BS EN 1090 is a set of harmonised standards regulating the
+                  fabrication and assembly of steel structures that was
+                  introduced in 2014.
+                </p>
+                <p class="text-base text-gray-500">
+                  Execution Class 2 comprises all supporting structures made of
+                  steel up to strength class S700. This typically includes
+                  buildings with between 2 and 15 floors.
+                </p>
+              </div>
             </div>
           </div>
         </div>
+
         <div class="pt-6">
           <div class="flow-root bg-gray-50 rounded-lg px-6 pb-8">
             <div class="-mt-6">
@@ -443,6 +514,89 @@ layout: default
                 We've made Estates and Cheshire Railings; the iconic black and
                 white open iron style, fencing since 1986. Popular throughout
                 Cheshire we've made miles of it.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="pt-6">
+          <div class="flow-root bg-gray-50 rounded-lg px-6 pb-8">
+            <div class="-mt-6">
+              <div>
+                <span
+                  class="
+                    inline-flex
+                    items-center
+                    justify-center
+                    p-3
+                    bg-gradient-to-b
+                    from-green-600
+                    to-green-300
+                    rounded-md
+                    shadow-lg
+                  "
+                >
+                  <!-- Heroicon name: outline/badge-check -->
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="h-5 w-5"
+                    viewBox="0 0 20 20"
+                    fill="currentColor"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                      clip-rule="evenodd"
+                    />
+                  </svg>
+                </span>
+              </div>
+              <h3 class="mt-8 text-lg font-medium text-gray-900 tracking-tight">
+                Safety Provision
+              </h3>
+              <p class="mt-5 text-base text-gray-500">
+                Fire escapes, gangways and handrails. Ideal to make new or old
+                areas safe.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="pt-6">
+          <div class="flow-root bg-gray-50 rounded-lg px-6 pb-8">
+            <div class="-mt-6">
+              <div>
+                <span
+                  class="
+                    inline-flex
+                    items-center
+                    justify-center
+                    p-3
+                    bg-gradient-to-b
+                    from-green-600
+                    to-green-300
+                    rounded-md
+                    shadow-lg
+                  "
+                >
+                  <!-- Heroicon name: outline/badge-check -->
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="h-5 w-5"
+                    viewBox="0 0 20 20"
+                    fill="currentColor"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                      clip-rule="evenodd"
+                    />
+                  </svg>
+                </span>
+              </div>
+              <h3 class="mt-8 text-lg font-medium text-gray-900 tracking-tight">
+                Stainless Steels
+              </h3>
+              <p class="mt-5 text-base text-gray-500">
+                Handrails on stairways and landings. Bespoke display stands.
               </p>
             </div>
           </div>
